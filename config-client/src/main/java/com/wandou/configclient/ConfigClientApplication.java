@@ -29,6 +29,8 @@ public class ConfigClientApplication {
 
     @RequestMapping(value = "/hi1")
     public String hi1() {
+        String string = "str";
+        String string1 = "wo 爱你商品成本";
         return foo1;
     }
 }
