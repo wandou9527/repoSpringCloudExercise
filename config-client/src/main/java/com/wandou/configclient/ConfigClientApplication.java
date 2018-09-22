@@ -7,6 +7,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.TimeZone;
+
 @EnableEurekaClient
 @RestController
 @SpringBootApplication
@@ -19,6 +21,7 @@ public class ConfigClientApplication {
     String foo1;
 
     public static void main(String[] args) {
+        TimeZone.setDefault(TimeZone.getTimeZone("Asia/Shanghai"));
         SpringApplication.run(ConfigClientApplication.class, args);
     }
 
