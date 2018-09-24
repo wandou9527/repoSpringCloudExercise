@@ -1,5 +1,6 @@
 package com.wandou.configclient;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,6 +12,7 @@ import java.util.TimeZone;
 
 @EnableEurekaClient
 @RestController
+@MapperScan("com.wandou.configclient.mapper")
 @SpringBootApplication
 public class ConfigClientApplication {
 
@@ -37,3 +39,5 @@ public class ConfigClientApplication {
         return foo1;
     }
 }
+
+
