@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>附录</title>
+    <link href="${base}/templates/${config.theme}/front/static/css/comm.css" rel="stylesheet" type="text/css"/>
+    <link href="${base}/templates/${config.theme}/front/static/css/index.css" rel="stylesheet" type="text/css"/>
+    <style>
+        h2 {
+            font-size: 170%;
+        }
+
+        h3 {
+            font-size: 120%;
+        }
+
+        p {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .box_wrap {
+            padding-left: 120px;
+            box-sizing: border-box; /*不向外撑开*/
+        }
+    </style>
+    <script type="text/javascript" src="${base}/templates/${config.theme}/front/static/js/jquery.js"></script>
+    <!--<script type="text/javascript" src="${base}/templates/${config.theme}/front/static/js/jquery.cookie.js"></script>-->
+    <!--<script type="text/javascript" src="${base}/templates/${config.theme}/front/static/js/ajax.js"></script>-->
+    <!--<script type="text/javascript" src="${base}/templates/${config.theme}/front/static/js/common.js"></script>-->
+    <script type="text/javascript">
+        // 你可以页面加载完后, 调用js进行跳转:
+        $(document).ready(function () {
+            location.href = location.href + '#${place}';
+        });
+    </script>
+</head>
+<body>
+<!-- header start -->
+[#include "templates/${config.theme}/front/header.html"]
+<!-- header end -->
+<div class="box_wrap">
+    <p>
+    <h2 id="new_member_guide">一、新手入门</h2>
+    <h3>1、注册</h3>
+    1.1 单击网站首页右上角的“注册”按钮<br>
+    1.2 输入手机号码，获取验证码，并输入验证码<br>
+    1.3 输入密码，再次输入确认密码<br>
+    1.4 点击“注册”按钮<br>
+    <h3>2、登录</h3>
+    2.1 单击网站首页右上角的“登录”按钮<br>
+    2.2 输入手机号码及密码<br>
+    2.3 点击“登录”按钮登录<br>
+    <h3>3、购买</h3>
+    3.1 在网站选择要购买的商品<br>
+    3.2 选择商品规格<br>
+    3.3 点击“加入购物袋”按钮<br>
+    3.4 点击“去结算”按钮<br>
+    3.5 在购物袋页面调整数量，点击“立即结算”<br>
+    3.6 选择收货地址及收货人<br>
+    3.7 选择配送方式<br>
+    3.8 点击“提交订单”按钮<br>
+    3.9 点击“支付”按钮<br>
+    3.10 打开微信，扫描页面中的二维码进行支付，并完成购买<br>
+    </p>
+
+    <p>
+    <h2>二、购物流程</h2>
+    1、在网站选择要购买的商品<br>
+    2、选择商品规格<br>
+    3、点击“加入购物袋”按钮<br>
+    4、点击“去结算”按钮<br>
+    5、在购物袋页面调整数量，点击“立即结算”<br>
+    6、选择收货地址及收货人<br>
+    7、选择配送方式<br>
+    8、点击“提交订单”按钮<br>
+    9、点击“支付”按钮<br>
+    10、打开微信，扫描页面中的二维码进行支付，并完成购买<br>
+    </p>
+
+    <p>
+    <h2>三、范围及运费</h2>
+    1、工作日、工作小时定义：<br>
+    工作日定义指每周一至周五，不含国家法定节假日。<br>
+    工作小时定义指每工作日的 9:00至18:00。<br>
+    2、订货方式、确认：<br>
+    在线订货：通过网站，依照采购系统流程进行在线订货。<br>
+    离线订货：通过传真、电话或与销售人员签订具体的购销合同进行订货。<br>
+    3、价格说明<br>
+    价格随时波动时有调整，客户订货价格以当日网上价格为准，生效后的订单价格均系当日网上价格<br>
+    </p>
+
+    <p>
+    <h2 id="delivery_cycle">四、配送周期</h2>
+    1、配送服务范围及服务时间：<br>
+    周一至周五9.00至18:00<br>
+    工作日晚间及周六、日不服务<br>
+    注：国家假日配送时间另行公告<br>
+    2、配送说明<br>
+    商品付款后发货<br>
+    3、紧急送货：<br>
+    凡客户要求紧急发货，每单收取订单总额10%的服务费，取低每单收费不少于10元人民币。<br>
+    </p>
+
+    <p>
+    <h2>五、网上支付</h2>
+    平台采用微信支付，直接使用微信扫码支付
+    </p>
+
+    <p>
+    <h2>六、服务范围</h2>
+    1、服务对象<br>
+    凡购买商品的用户均可享受售后服务<br>
+    2、服务时间<br>
+    周一至周五（不含国家的法定节假日），09:00-18:00<br>
+    3、热线服务<br>
+    客户服务热线是400-8108-8818—转5<br>
+    为您提供免费的产品服务和技术咨询服务<br>
+    </p>
+
+    <p>
+    <h2>七、客户服务</h2>
+    客户服务热线是400-8108-8818—转5
+    </p>
+
+    <p>
+    <h2>八、常见问题</h2>
+    Q: 公司全称是？<br>
+    A: 北京玖富美好科技有限公司<br>
+    Q: 公司的客服电话是？<br>
+    A: 400-8108-8818—转5<br>
+    </p>
+
+    <p>
+    <h2>九、找回密码</h2>
+    请您联系客服：400-8108-8818—转5
+    </p>
+
+    <p>
+    <h2>十、建议投诉</h2>
+    请发送邮件至邮箱：plus_fankui@9fplus.com
+    </p>
+
+    <p>
+    <h2>十一、关于我们</h2>
+    北京玖富美好科技有限公司为玖富集团全资子公司<br>
+    主要经营电子商务业务<br>
+    如有任何问题可以与客服联系<br>
+    </p>
+</div>
+<!-- footer start -->
+[#include "templates/${config.theme}/front/footer.html"]
+<!-- footer end -->
+</body>
+</html>
