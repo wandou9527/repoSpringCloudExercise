@@ -61,10 +61,14 @@ public class TkTest {
 
     @Test
     public void updateTest() {
-        User user = new User();
-        user.setId(10L);
-        user.setUpdateTime(new Date());
-        userMapper.updateByPrimaryKeySelective(user);
+//        User user = new User();
+//        user.setId(9L);
+//        user.setUpdateTime(new Date());
+//        userMapper.updateByPrimaryKey(user);
+        User user2 = new User();
+        user2.setId(8L);
+        user2.setWechat("selective");
+        userMapper.updateByPrimaryKeySelective(user2);
     }
 
 }
