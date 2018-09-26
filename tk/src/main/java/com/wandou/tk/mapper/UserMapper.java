@@ -1,6 +1,7 @@
 package com.wandou.tk.mapper;
 
 import com.wandou.tk.po.User;
+import org.springframework.stereotype.Repository;
 import tk.mybatis.mapper.common.Mapper;
 
 /**
