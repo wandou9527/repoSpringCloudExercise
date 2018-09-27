@@ -1,8 +1,11 @@
 package com.wandou.tk;
 
 import com.wandou.tk.constant.NameConst;
+import com.wandou.tk.po.GlobalId;
+import com.wandou.tk.util.IdUtil;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.RandomStringUtils;
+import org.apache.commons.lang3.ArrayUtils;
 import org.junit.Test;
 
 /**
@@ -44,5 +47,26 @@ public class Demo {
             String s3 = RandomStringUtils.randomNumeric(6);
             System.out.println("randomNumeric " + s3);
         }
+    }
+
+    @Test
+    public void m3ToString() {
+        GlobalId globalId = new GlobalId();
+        globalId.setItype(7);
+        System.out.println(globalId);
+    }
+
+    @Test
+    public void m4GlobalId() {
+        Long aLong = new IdUtil().genGlobalId(1, null);
+        System.out.println(aLong);
+        //报错，因为没有mapper对象
+    }
+
+    @Test
+    public void m5() {
+        int [] arr = {};
+        boolean empty = ArrayUtils.isEmpty(arr);
+        System.out.println(empty);
     }
 }

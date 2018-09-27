@@ -2,6 +2,7 @@ package com.wandou.tk;
 
 import com.wandou.tk.mapper.UserMapper;
 import com.wandou.tk.po.User;
+import com.wandou.tk.util.IdUtil;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
@@ -20,6 +21,8 @@ public class TkTest {
 
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private IdUtil idUtil;
 
     @Test
     public void contextLoads() {
@@ -67,8 +70,17 @@ public class TkTest {
 //        userMapper.updateByPrimaryKey(user);
         User user2 = new User();
         user2.setId(8L);
-        user2.setWechat("selective");
+        user2.setWechat("selective11112");
         userMapper.updateByPrimaryKeySelective(user2);
     }
+
+    @Test
+    public void m4GlobalId() {
+        for (int i = 0; i < 1000; i++) {
+            Long aLong = idUtil.genGlobalId(1, null);
+            System.out.println(aLong);
+        }
+    }
+
 
 }
