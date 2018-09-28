@@ -9,6 +9,6 @@ import tk.mybatis.mapper.common.Mapper;
  * @date 2018/9/
  * @description
  */
-
+@org.apache.ibatis.annotations.Mapper
 public interface UserMapper extends Mapper<User> {
 }

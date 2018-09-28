@@ -9,5 +9,6 @@ import tk.mybatis.mapper.common.Mapper;
  * @description
  * @modify
  */
+@org.apache.ibatis.annotations.Mapper
 public interface GlobalIdMapper extends Mapper<GlobalId> {
 }

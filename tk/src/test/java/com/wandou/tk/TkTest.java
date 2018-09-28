@@ -1,6 +1,8 @@
 package com.wandou.tk;
 
+import com.wandou.tk.mapper.AreaMapper;
 import com.wandou.tk.mapper.UserMapper;
+import com.wandou.tk.po.Area;
 import com.wandou.tk.po.User;
 import com.wandou.tk.util.IdUtil;
 import org.apache.commons.lang.RandomStringUtils;
@@ -11,6 +13,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.Date;
 import java.util.List;
@@ -23,6 +26,8 @@ public class TkTest {
     private UserMapper userMapper;
     @Autowired
     private IdUtil idUtil;
+    @Autowired
+    private AreaMapper areaMapper;
 
     @Test
     public void contextLoads() {
@@ -32,6 +37,12 @@ public class TkTest {
     public void testGet() {
         User user = userMapper.selectByPrimaryKey(2L);
         System.out.println(user.getRealName());
+
+        User user1 = new User();
+        user1.setRealName("乔峰");
+        Example example = new Example(User.class);
+        List<User> users = userMapper.selectByExample(example);
+        System.out.println(users);
     }
 
     @Test
@@ -76,11 +87,16 @@ public class TkTest {
 
     @Test
     public void m4GlobalId() {
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 1; i++) {
             Long aLong = idUtil.genGlobalId(1, null);
             System.out.println(aLong);
         }
     }
 
+    @Test
+    public void m5Mybatis() {
+        List<Area> list = areaMapper.list();
+        System.out.println(list);
+    }
 
 }
