@@ -17,7 +17,7 @@ import java.util.Date;
 public class User {
 
     @Id
-    @GeneratedValue(generator = "JDBC") //支持自增id的返回
+    @GeneratedValue(generator = "JDBC") //支持自增id的返回；如不需主键返回：@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String username;
     private String password;

@@ -1,5 +1,6 @@
 package com.wandou.tk;
 
+import com.wandou.tk.constant.NameConst;
 import com.wandou.tk.mapper.AreaMapper;
 import com.wandou.tk.mapper.UserMapper;
 import com.wandou.tk.po.Area;
@@ -35,12 +36,15 @@ public class TkTest {
 
     @Test
     public void testGet() {
-        User user = userMapper.selectByPrimaryKey(2L);
-        System.out.println(user.getRealName());
+//        User user = userMapper.selectByPrimaryKey(2L);
+//        System.out.println(user.getRealName());
 
-        User user1 = new User();
-        user1.setRealName("乔峰");
+//        User user1 = new User();
+//        user1.setRealName("乔峰");
         Example example = new Example(User.class);
+
+        example.createCriteria().andEqualTo("realName", "乔峰");
+
         List<User> users = userMapper.selectByExample(example);
         System.out.println(users);
     }
@@ -62,15 +66,17 @@ public class TkTest {
 
     @Test
     public void t4() {
-        User user = new User();
-        user.setPhone("133-0000-0000");
-        user.setRealName("小龙女");
-        user.setWechat("xiaolongnv");
-        user.setSex(1);
-        user.setUsername(RandomStringUtils.random(6, false, true));
-        user.setUpdateTime(DateUtils.addDays(new Date(), -2));
-        int i = userMapper.insertSelective(user);
-        System.out.println(i);
+        List jinSwordsmans = NameConst.jinSwordsmans;
+        for (int i = 0; i < jinSwordsmans.size(); i++) {
+            User user = new User();
+            user.setPhone("133-0000-0000");
+            user.setRealName(jinSwordsmans.get(i).toString());
+            user.setWechat("wxid" + RandomStringUtils.random(6, false, true));
+            user.setSex(1);
+            user.setUsername(idUtil.genGlobalId(0, null).toString());
+            int insertSelective = userMapper.insertSelective(user);
+            System.out.println(insertSelective);
+        }
     }
 
     @Test
