@@ -8,7 +8,6 @@ package com.wandou.configclient.po;
 public class User {
 
     private Long id;
-    private String uname;
     private String realName;
     private String phone;
     private String wechat;
@@ -25,9 +24,6 @@ public class User {
         return realName;
     }
 
-    public String getUname() {
-        return uname;
-    }
 
     public String getPhone() {
         return phone;
@@ -49,10 +45,6 @@ public class User {
         this.realName = realName;
     }
 
-    public void setUname(String uname) {
-        this.uname = uname;
-    }
-
     public void setPhone(String phone) {
         this.phone = phone;
     }
@@ -63,17 +55,5 @@ public class User {
 
     public void setSex(Integer sex) {
         this.sex = sex;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", uname='" + uname + '\'' +
-                ", realName='" + realName + '\'' +
-                ", phone='" + phone + '\'' +
-                ", wechat='" + wechat + '\'' +
-                ", sex=" + sex +
-                '}';
     }
 }

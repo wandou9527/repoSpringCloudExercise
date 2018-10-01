@@ -23,7 +23,7 @@ public class ConfigClientApplicationTests {
 
     @Test
     public void testMPGet() {
-        User user = userMapper.selectById(1);
+        User user = userMapper.selectById(16);
         System.out.println(user.getRealName());
     }
 
