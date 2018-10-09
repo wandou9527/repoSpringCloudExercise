@@ -41,5 +41,5 @@ public class NameConst {
 //    薛慕华
 
     public static final List jinSwordsmans = Arrays.asList("无崖子", "云中鹤", "出尘子", "乔峰", "苏星河", "段誉", "段正淳",
-            "秦红棉", "萧远山", "虚竹", "摘星子");
+            "秦红棉", "萧远山", "虚竹", "摘星子", "鸠摩智", "陈孤雁", "刀白凤");
 }

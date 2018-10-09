@@ -2,6 +2,7 @@ package com.wandou.configclient;
 
 import com.wandou.configclient.mapper.UserMapper;
 import com.wandou.configclient.po.User;
+import com.wandou.configclient.util.MqSender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,8 @@ public class ConfigClientApplicationTests {
 
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private MqSender mqSender;
 
     @Test
     public void contextLoads() {
@@ -31,6 +34,11 @@ public class ConfigClientApplicationTests {
     public void testSelectList() {
         List<User> users = userMapper.selectList(null);
         System.out.println(users);
+    }
+
+    @Test
+    public void testMq() {
+        mqSender.sende();
     }
 
 }
