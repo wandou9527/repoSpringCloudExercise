@@ -9,6 +9,6 @@ import tk.mybatis.mapper.common.Mapper;
  * @date 2018/9/
  * @description
  */
-@org.apache.ibatis.annotations.Mapper
+//@org.apache.ibatis.annotations.Mapper //启动类加@MapperScan("com.wandou.tk.mapper")和Mapper加注解此项选其一
 public interface UserMapper extends Mapper<User> {
 }

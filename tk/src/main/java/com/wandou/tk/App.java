@@ -21,7 +21,7 @@ import javax.sql.DataSource;
 import java.util.TimeZone;
 
 @ServletComponentScan //使用注解注册Servlet
-//@MapperScan("com.wandou.tk.mapper") //通过使用@MapperScan可以指定要扫描的Mapper类的包的路径
+@MapperScan("com.wandou.tk.mapper") //通过使用@MapperScan可以指定要扫描的Mapper类的包的路径
 @EnableEurekaClient
 @RestController
 @SpringBootApplication

@@ -43,6 +43,9 @@ public class ExampleTest {
         System.out.println(users1);
     }
 
+    /**
+     * 通用 Example (通用 Mapper 的)
+     */
     @Test
     public void m2() {
         Example example = new Example(User.class);
@@ -53,6 +56,23 @@ public class ExampleTest {
         List<User> users = userMapper.selectByExample(example);
         System.out.println(users.size());
         System.out.println(users);
+    }
+
+    /**
+     * 通用 example 排序
+     */
+    @Test
+    public void m3OrderBy() {
+        Example example = new Example(User.class);
+        example.orderBy("realName").orderBy("phone").desc().orderBy("id").asc();
+
+        List<User> users = userMapper.selectByExample(example);
+        System.out.println(users.size());
+        System.out.println(users);
+
+        example.builder(User.class)
+                .setDistinct(true)
+                .build();
     }
 
 }
