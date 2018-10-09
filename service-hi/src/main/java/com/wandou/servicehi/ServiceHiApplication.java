@@ -45,9 +45,15 @@ public class ServiceHiApplication {
 
     }
 
-    @Bean
-    public AlwaysSampler defaultSampler() {
-        return new AlwaysSampler();
+//    @Bean
+//    public AlwaysSampler defaultSampler() {
+//        return new AlwaysSampler();
+//    }
+
+    @RequestMapping("/hi1")
+    public String hi1() {
+        LOG.log(Level.INFO, "hi1接口，仅调一层去miya");
+        return restTemplate.getForObject("http://localhost:8989/miya/ziji", String.class);
     }
 
 }
