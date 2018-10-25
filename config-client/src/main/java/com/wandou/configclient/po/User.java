@@ -1,10 +1,13 @@
 package com.wandou.configclient.po;
 
+import lombok.ToString;
+
 /**
  * @author liming
  * @date 2018/9/23 20:54
  * @description
  */
+@ToString
 public class User {
 
     private Long id;
