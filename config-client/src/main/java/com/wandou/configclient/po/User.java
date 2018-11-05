@@ -1,5 +1,7 @@
 package com.wandou.configclient.po;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.ToString;
 
 /**
@@ -7,7 +9,9 @@ import lombok.ToString;
  * @date 2018/9/23 20:54
  * @description
  */
+@Builder
 @ToString
+@AllArgsConstructor
 public class User {
 
     private Long id;
