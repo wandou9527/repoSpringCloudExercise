@@ -85,11 +85,11 @@
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>1.1.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.0.18</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.alibaba</groupId>-->
+            <!--<artifactId>druid</artifactId>-->
+            <!--<version>1.0.18</version>-->
+        <!--</dependency>-->
         <!-- mybatis tk starter 有提供 -->
         <!--<dependency>-->
             <!--<groupId>org.mybatis.spring.boot</groupId>-->

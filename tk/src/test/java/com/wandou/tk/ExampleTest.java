@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import tk.mybatis.mapper.entity.Example;
 
+import javax.persistence.Table;
 import java.util.List;
 
 /**
@@ -73,6 +74,19 @@ public class ExampleTest {
         example.builder(User.class)
                 .setDistinct(true)
                 .build();
+    }
+
+    @Test
+    public void m4Update() {
+        User userRecord = new User();
+        userRecord.setPhone("13388");
+
+        Example example = new Example(User.class);
+        example.createCriteria().andEqualTo("realName", "李明");
+
+        int i = userMapper.updateByExampleSelective(userRecord, example);
+
+        System.out.println(i);
     }
 
 }
