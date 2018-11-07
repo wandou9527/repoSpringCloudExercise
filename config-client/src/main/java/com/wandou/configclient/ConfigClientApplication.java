@@ -20,7 +20,6 @@ public class ConfigClientApplication {
 
     @Value("${foo}")
     String foo;
-
     @Value("${foo1}")
     String foo1;
 
