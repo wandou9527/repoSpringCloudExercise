@@ -19,10 +19,19 @@ public class MqApplicationTests {
     }
 
 
-
     @Test
     public void testMq() {
-        mqSender.sende();
+        mqSender.send();
+    }
+
+    @Test
+    public void m2() {
+        mqSender.send2();
+    }
+
+    @Test
+    public void m3() {
+        mqSender.send3();
     }
 
 }

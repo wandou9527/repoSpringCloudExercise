@@ -1,5 +1,6 @@
 package com.wandou.util;
 
+import com.wandou.constant.MqConst;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.AmqpTemplate;
@@ -12,12 +13,11 @@ import java.util.Date;
 
 /**
  * @author liming
- * @date 2018/9/30 18:12
+ * @date 2018/11
  * @description
  * @modify
  */
 @Component
-@RabbitListener(queues = "hello")
 public class MqReceiver {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -25,9 +25,16 @@ public class MqReceiver {
     @Autowired
     private AmqpTemplate amqpTemplate;
 
+//    @RabbitHandler
+//    public void receiver(String hello) {
+//        logger.info("接收消息=====》》》》》{}", hello);
+//    }
+
+    @RabbitListener(queues = MqConst.QUEEN_HELLO)
     @RabbitHandler
-    public void receiver(String hello) {
-        logger.info("接收消息=====》》》》》{}", hello);
+    public void receiver(String msg) {
+        logger.info("接收消息=====》》》》》 {}", msg);
+//        System.out.println("Receiver:" + msg);
     }
 }
 
