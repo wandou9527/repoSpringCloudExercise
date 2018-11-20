@@ -1,19 +1,19 @@
-server:
-  port: 8761
-
-eureka:
-  instance:
-    hostname: 47.93.97.169
-  client:
-    # 通过eureka.client.registerWithEureka：false和fetchRegistry：false来表明自己是一个eureka server.
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-  server:
-    enable-self-preservation: false #加此會有頁面紅色報錯; 实际是自我保护的开关
-
-spring:
-  application:
-    name: eurka-server
-
+#server:
+#  port: 8761
+#
+#eureka:
+#  instance:
+#    hostname: 47.93.97.169
+#  client:
+#    # 通过eureka.client.registerWithEureka：false和fetchRegistry：false来表明自己是一个eureka server.
+#    registerWithEureka: false
+#    fetchRegistry: false
+#    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#  server:
+#    enable-self-preservation: false #加此會有頁面紅色報錯; 实际是自我保护的开关
+#
+#spring:
+#  application:
+#    name: eurka-server
+#
