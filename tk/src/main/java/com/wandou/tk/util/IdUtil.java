@@ -2,8 +2,12 @@ package com.wandou.tk.util;
 
 import com.wandou.tk.mapper.GlobalIdMapper;
 import com.wandou.tk.po.GlobalId;
+import org.apache.commons.lang3.time.DateFormatUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.util.Date;
+import java.util.TimeZone;
 
 /**
  * @author liming
@@ -26,5 +30,13 @@ public class IdUtil {
             return globalId.getId();
         }
         return null;
+    }
+
+    public String genNo() {
+        String dateStr = DateFormatUtils.format(new Date(), "yyMMddHHmmssSSS", TimeZone.getTimeZone("Asia/Shanghai"));
+        dateStr = dateStr.substring(2);
+        StringBuffer sb = new StringBuffer(dateStr);
+        sb.insert(1, "01");
+        return sb.toString();
     }
 }
