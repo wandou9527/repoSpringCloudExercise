@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<form name="punchout_form" method="post"
+      action="https://openapi.alipaydev.com/gateway.do?charset=UTF-8&method=alipay.trade.wap.pay&sign=iukUsQ8Ldft0rgm5mX2fBZ2Ex4ajS%2FACYLBSlrp6XUmoHexbk1vqeUr6Y9T5kDe%2FkG1HFWjAxHXg1QLPOu2NKFQhVdeA6SXOabefT85pSsUtU3rGGgqWidxiCwR754NkxVrh9qgAL2oX6ElYjXFfF%2FlbKjJ8XOot%2FrVGruVcQg1%2FB%2BnM7G06iaLwBLhqOj0x%2FVRc7aF3kPjjO%2BvXDoOyR%2F7unUXxxohmsAcL8dn7UP64rMwd4UOAO1UiXhv8vGZDYnTPH6Nj3BtQPpUeiWBI81RThVhaIDvnorKJomg4LjzCpGP49vBadSB7eQkzLqXGLMWgQeeEiZxejL4TnSRCzA%3D%3D&return_url=http%3A%2F%2F%E5%95%86%E6%88%B7%E7%BD%91%E5%85%B3%E5%9C%B0%E5%9D%80%2Falipay.trade.wap.pay-JAVA-UTF-8%2Freturn_url.jsp&version=1.0&app_id=2016091900549558&sign_type=RSA2&timestamp=2018-11-22+16%3A45%3A41&alipay_sdk=alipay-sdk-java-3.3.87.ALL&format=json">
+    <input type="hidden" name="biz_content" value="{&quot;time_expire&quot;:&quot;2018-11-22 17:15:34&quot;,&quot;out_trade_no&quot;:&quot;tradeOrderNononono9995&quot;,&quot;total_amount&quot;:&quot;0.02&quot;,&quot;subject&quot;:&quot;subject&quot;,&quot;body&quot;:&quot;detail&quot;,&quot;product_code&quot;:&quot;QUICK_WAP_WAY&quot;}">
+    <input
+        type="submit" value="立即支付" style="display:none">
+</form>
+<script>document.forms[0].submit();</script>
 </body>
 </html>
