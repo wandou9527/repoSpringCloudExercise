@@ -32,7 +32,7 @@ public class MqSender {
         String dateStr = DateFormatUtils.format(new Date(), CommonConst.DATE_PATTERN);
 
         String context = "lm say hello " + dateStr;
-        logger.info("发送消息=========》》》》{}", context);
+        logger.info("发送消息=========》》》》 {}", context);
         this.amqpTemplate.convertAndSend(MqConst.QUEEN_HELLO, context);
 
     }
@@ -41,10 +41,11 @@ public class MqSender {
         String dateStr = DateFormatUtils.format(new Date(), CommonConst.DATE_PATTERN);
 
         String context = "lm say hello " + DateFormatUtils.format(new Date(), CommonConst.DATE_PATTERN);
-        logger.info("发送消息=========》》》》{}", context);
+        logger.info("发送消息=========》》》》 {}", context);
 //        this.amqpTemplate.convertAndSend(MqConst.QUEEN_HELLO, context);
         MessageProperties messageProperties = new MessageProperties();
         messageProperties.setMessageId(UUID.randomUUID().toString());
+        messageProperties.setConsumerQueue(MqConst.QUEEN_HELLO);
         Message message = new Message(dateStr.getBytes(), messageProperties);
         this.amqpTemplate.send(message);
     }
