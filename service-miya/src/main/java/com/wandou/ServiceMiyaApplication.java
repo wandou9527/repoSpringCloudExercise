@@ -37,6 +37,16 @@ public class ServiceMiyaApplication {
         return restTemplate.getForObject("http://localhost:8988/info", String.class);
     }
 
+    @RequestMapping("/miya/ziji")
+    public String ziji() {
+        LOG.info("访问 ziji 接口");
+        for (int i = 0; i < 1000; i++) {
+            String string = new String("str");
+            System.out.println(string);
+        }
+        return "wo shi ziji service-miya";
+    }
+
     @Bean
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
